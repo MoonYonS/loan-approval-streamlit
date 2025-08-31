@@ -58,7 +58,9 @@ st.dataframe(pd.DataFrame(report).transpose())
 matrix = confusion_matrix(y_test, y_pred)
 print("\nConfusion Matrix:\n", matrix)
 
-
+# Confusion Matrix
+st.subheader("🔎 Confusion Matrix")
+cm = confusion_matrix(y_test, y_pred)
 
 fig, ax = plt.subplots()
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
